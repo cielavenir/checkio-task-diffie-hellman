@@ -41,7 +41,7 @@ def checker(answer,user_result):
 
 api.add_listener(
     ON_CONNECT,
-    CheckiORefereeCode(
+    CheckiOReferee(
         tests=TESTS,
         cover_code={
             'python-27': cover_codes.unwrap_args,
