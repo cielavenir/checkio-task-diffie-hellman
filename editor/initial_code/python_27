@@ -1,0 +1,25 @@
+def checkio(p,g,a):
+	return 0
+
+def chk():
+	tests={'Test':[]}
+	seeds=[
+		[53,2],
+		[51683,2],
+		[35879,3],
+		[35963,5],
+		[44267,7],
+	]
+	for p,g in seeds:
+		for _ in range(10):
+			a0=random.randint(2,1000)
+			a=pow(g,a0,p)
+			tests['Test'].append({'input':(p,g,a),'answer':(p,a0)})
+	def checker(answer,user_result):
+		p,a0=answer
+		b,k=user_result
+		return k==pow(b,a0,p)
+	for e in tests['Test']:
+		assert checker(e['answer'],checkio(*e['input']))
+
+if __name__=='__main__': chk()
