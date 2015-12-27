@@ -37,7 +37,7 @@ from tests import TESTS
 def checker(answer,user_result):
 	p,a0=answer
 	b,k=user_result
-	return k==pow(b,a0,p)
+	return (user_result,k==pow(b,a0,p))
 
 api.add_listener(
     ON_CONNECT,
