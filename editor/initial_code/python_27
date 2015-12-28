@@ -1,5 +1,5 @@
 def checkio(p,g,a):
-	return 0
+	return (0,0)
 
 def chk():
 	tests={'Test':[]}
