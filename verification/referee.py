@@ -35,8 +35,10 @@ from checkio.referees import checkers
 from tests import TESTS
 
 def checker(answer,user_result):
-	p,a0=answer
+	p,a0,a=answer
 	b,k=user_result
+	if k in [0,1,a]:
+		return (False,"key is too weak; choose other than 0,1 and a.")
 	return (k==pow(b,a0,p),user_result)
 
 api.add_listener(

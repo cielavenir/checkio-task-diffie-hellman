@@ -34,4 +34,4 @@ for p,g in seeds:
 	for _ in range(10):
 		a0=random.randint(2,1000)
 		a=pow(g,a0,p)
-		TESTS['Test'].append({'input':(p,g,a),'answer':(p,a0)})
+		TESTS['Test'].append({'input':(p,g,a),'answer':(p,a0,a)})
